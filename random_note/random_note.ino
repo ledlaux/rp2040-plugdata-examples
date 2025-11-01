@@ -14,6 +14,7 @@ extern "C" void __atomic_clear(volatile void* ptr, int memorder) {
   *(volatile bool*)ptr = false;
 }
 
+// --- Hardware random seed ---
 class Trand {
 
   public: Trand();
