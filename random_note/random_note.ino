@@ -19,6 +19,7 @@ extern "C" void __atomic_clear(volatile void* ptr, int memorder) {
 #define I2S_BCLK_PIN  10
 #define SAMPLE_RATE   44100
 #define AUDIO_BLOCK   128
+float volume = 0.5f;
 
 float audioBlock[2*AUDIO_BLOCK];
 int16_t left[AUDIO_BLOCK];
@@ -180,7 +181,7 @@ void loop() {
  //   if(potVal != lastPot){
  //       lastPot = potVal;
  //       volume = potVal / 4095.0f;
-    }
+    
 
     pd_prog.processInlineInterleaved(audioBlock, audioBlock, AUDIO_BLOCK);
 
@@ -193,3 +194,4 @@ void loop() {
         i2s_output.write16(left[i], right[i]);
     }
 }
+
