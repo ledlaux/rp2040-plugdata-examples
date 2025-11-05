@@ -20,7 +20,7 @@ extern "C" void __atomic_clear(volatile void* ptr, int memorder) {
 #define I2S_BCLK_PIN  10
 #define I2S_BUFFERS   4
 #define I2S_WORDS     64
-#define SAMPLE_RATE   22050
+#define SAMPLE_RATE   22050 // Higher sample rate is not stabile
 #define MAX_VOICES    4
 
 // -------------------- Heavy & I2S --------------------
