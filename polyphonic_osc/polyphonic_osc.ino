@@ -45,8 +45,8 @@ struct Voice {
 constexpr hv_uint32_t VOICE_HASHES[MAX_VOICES] = {
   0x3E185FE5,  // NOTE1
   0x3C682D20,  // NOTE2
-  0xC430EA70,
-  0xD3ABA527
+  0xC430EA70,  // NOTE3
+  0xD3ABA527   // NOTE4
 };
 
 Voice voices[MAX_VOICES];
