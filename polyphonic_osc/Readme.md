@@ -1,4 +1,4 @@
-This example demonstrates **polyphonic oscillators** in Pure Data, using USB MIDI input (**[notein]**) with custom voice allocation implemented directly in the Arduino code.
+This example demonstrates **polyphonic oscillators** in Pure Data, using USB MIDI input with custom voice allocation implemented directly in the Arduino code.
 
 > **Note:** The **[poly~]** object, normally used for polyphonic input in PD, is currently not functional on RP2040 when using Heavy-compiled code.
 
