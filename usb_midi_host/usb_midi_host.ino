@@ -1,3 +1,6 @@
+// USB midi host example is using rppicomidi/usb_midi_host library
+
+
 #include <I2S.h>
 #include "Heavy_oscilator.hpp"
 #include <Adafruit_TinyUSB.h>
