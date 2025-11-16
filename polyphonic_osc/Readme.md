@@ -2,7 +2,7 @@ This example demonstrates **polyphonic oscillators** in Pure Data, using USB MID
 
 > **Note:** The **[poly~]** object, normally used for polyphonic input in PD, is currently not functional on RP2040 when using Heavy-compiled code.
 
-Each **[r Note]** object is assigned a unique hash index, defined in `Heavy_oscillator.cpp`:
+For each **[r Note]** object is assigned a unique hash index, defined in `Heavy_oscillator.cpp`:
 
 ```cpp
 constexpr hv_uint32_t VOICE_HASHES[MAX_VOICES] = {
