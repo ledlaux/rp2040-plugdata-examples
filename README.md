@@ -7,7 +7,7 @@ This repository contains examples of running **Plugdata (PD) patches exported wi
 
 ## Inspiration
 
-PD patches and code for RP2350 boards published by Kamil Ondroušek:  
+PD patches and code for RP2350 boards published by **Kamil Ondroušek**:  
 [Pico2_Audio](https://github.com/jlswbs/Pico2_Audio)
 
 ---
