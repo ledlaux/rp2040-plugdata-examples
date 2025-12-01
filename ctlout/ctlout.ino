@@ -1,3 +1,8 @@
+// This example creates utility device for Novation Circuit Tracks chromatic sample playback. 
+// Send MIDI notes to the "RP2040 Zero" USB MIDI device and route its output to Circuit Tracks MIDI channel 10.
+
+// Copyright (c) 2025 Vadims Maksimovs
+
 /*
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
