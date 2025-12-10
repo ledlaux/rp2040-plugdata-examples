@@ -1,5 +1,5 @@
 /*
- * Rain and wind synthesizer. Original patch by Simple Trax and Taavi Viikman
+ * Rain and wind synthesizer. Original patch by Simple Trax and Taavi Viikman.
  * https://youtu.be/ZXwk8sDts0Y
  *
  * Adapted for Heavy compiler by Ledlaux.
