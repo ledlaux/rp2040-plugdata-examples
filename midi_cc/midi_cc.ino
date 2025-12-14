@@ -18,17 +18,19 @@
 #include <Adafruit_TinyUSB.h>
 #include "Heavy_oscilator.hpp"
 
-// --- Atomic stubs for RP2040 ---
+// --- Atomic stubs for RP2040 only ---
+#if defined(ARDUINO_ARCH_RP2040)
 extern "C" bool __atomic_test_and_set(volatile void* ptr, int memorder) {
-  (void)memorder; 
-  bool old = *(volatile bool*)ptr;
-  *(volatile bool*)ptr = true;
-  return old;
+    (void)memorder;
+    bool old = *(volatile bool*)ptr;
+    *(volatile bool*)ptr = true;
+    return old;
 }
 extern "C" void __atomic_clear(volatile void* ptr, int memorder) {
-  (void)memorder;
-  *(volatile bool*)ptr = false;
+    (void)memorder;
+    *(volatile bool*)ptr = false;
 }
+#endif
 
 // --- I2S config ---
 #define I2S_DATA_PIN  9
