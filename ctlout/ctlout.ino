@@ -37,29 +37,6 @@ extern "C" void __atomic_clear(volatile void* ptr, int memorder) {
 }
 #endif
 
-// --- Hardware random seed ---
-class Trand {
-public:
-    Trand();
-};
-
-Trand::Trand() {
-    uint32_t random = 0;
-    uint32_t random_bit;
-    volatile uint32_t *rnd_reg = (uint32_t *)(ROSC_BASE + ROSC_RANDOMBIT_OFFSET);
-
-    for (int k = 0; k < 32; k++) {
-        while (1) {
-            random_bit = (*rnd_reg) & 1;
-            if (random_bit != ((*rnd_reg) & 1)) break;
-        }
-        random = (random << 1) | random_bit;
-    }
-    srand(random);
-}
-
-Trand Trand;
-
 // --- I2S config ---
 #define I2S_DATA_PIN  9
 #define I2S_BCLK_PIN  10
