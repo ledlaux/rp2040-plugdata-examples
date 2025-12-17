@@ -2,7 +2,7 @@
 
 This folder contains examples of **polyphonic USB MIDI input** implementation in Pure Data Heavy compiled patches using the TinyUSB stack.
 
-The first example implements **custom voice allocation directly in the Arduino code**.  
+The first example implements **custom voice allocation directly in the Arduino code**, which makes it more reliable. 
 For each `[r Note]` object, a unique hash index is assigned. These hashes are defined in `Heavy_oscillator.cpp`:
 
 ```cpp
