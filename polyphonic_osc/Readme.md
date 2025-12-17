@@ -1,8 +1,9 @@
-This example demonstrates **polyphonic oscillators** in Pure Data, using USB MIDI input with custom voice allocation implemented directly in the Arduino code.
+# Polyphonic MIDI
 
-> **Note:** The **[poly~]** object, normally used for polyphonic input in PD, is currently not functional on RP2040 when using Heavy-compiled code.
+This folder contains examples of **polyphonic USB MIDI input** implementation in Pure Data Heavy compiled patches using the TinyUSB stack.
 
-For each **[r Note]** object a unique hash index is assigned, they are defined in `Heavy_oscillator.cpp`:
+The first example implements **custom voice allocation directly in the Arduino code**.  
+For each `[r Note]` object, a unique hash index is assigned. These hashes are defined in `Heavy_oscillator.cpp`:
 
 ```cpp
 constexpr hv_uint32_t VOICE_HASHES[MAX_VOICES] = {
@@ -11,3 +12,5 @@ constexpr hv_uint32_t VOICE_HASHES[MAX_VOICES] = {
     0xC430EA70, // NOTE3
     0xD3ABA527  // NOTE4
 };
+```
+Second example patch uses the built-in **[poly~]** object to manage individual audio voices (4 voice max).
